@@ -782,8 +782,8 @@ function makeWheel(z){
     g.add(s);
   }
   const fender = new THREE.Mesh(fenderGeo, M.frame);
-  fender.position.y = 0.015; fender.castShadow = true;
-  g.add(fender);
+  fender.position.set(0, AXLE_Y + 0.015, z); fender.castShadow = true;
+  bike.add(fender);
   g.position.set(0, AXLE_Y, z);
   bike.add(g);
   return g;
